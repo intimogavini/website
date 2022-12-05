@@ -747,8 +747,8 @@ input #email,
   flex-direction: column;
   text-align: center;
   background: var(--black);
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
 }
 
 .footer .box-container .socials {
