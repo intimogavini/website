@@ -214,127 +214,132 @@ const sendContact = () => {
 
 ///// Contact us ends /////
 
-///// AjaxCalls starts /////
 
-//Button 1
-document.getElementById("load-1").onclick = () => {
-  let request;
 
-  if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-  } else {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
-  }
 
-  request.open("GET", "json/tab1.json");
 
-  request.onreadystatechange = () => {
-    if (request.readyState === 4 && request.status === 200) {
-      let items = JSON.parse(request.responseText);
-      console.log(items);
 
-      let output = "";
+// ///// AjaxCalls starts /////
 
-      for (let key in items) {
-        output += items[key].content;
-        document.getElementById("load-1").style.background = "black";
-        document.getElementById("load-1").style.color = "white";
-        document.getElementById("load-2").style.background = "#bbbbbb";
-        document.getElementById("load-2").style.color = "black";
-        document.getElementById("load-3").style.background = "#bbbbbb";
-        document.getElementById("load-3").style.color = "black";
-        document.getElementById("load-1").innerHTML =
-          "❮ Chi Siamo ❯";
-        document.getElementById("load-2").innerHTML = "Il negozio";
-        document.getElementById("load-3").innerHTML = "Brand collection";
-      }
+// //Button 1
+// document.getElementById("load-1").onclick = () => {
+//   let request;
 
-      document.getElementById("update").innerHTML = output;
-    }
-  };
+//   if (window.XMLHttpRequest) {
+//     request = new XMLHttpRequest();
+//   } else {
+//     request = new ActiveXObject("Microsoft.XMLHTTP");
+//   }
 
-  request.send();
-};
+//   request.open("GET", "json/tab1.json");
 
-//Button 2
-document.getElementById("load-2").onclick = () => {
-  let request;
+//   request.onreadystatechange = () => {
+//     if (request.readyState === 4 && request.status === 200) {
+//       let items = JSON.parse(request.responseText);
+//       console.log(items);
 
-  if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-  } else {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
-  }
+//       let output = "";
 
-  request.open("GET", "json/tab2.json");
+//       for (let key in items) {
+//         output += items[key].content;
+//         document.getElementById("load-1").style.background = "black";
+//         document.getElementById("load-1").style.color = "white";
+//         document.getElementById("load-2").style.background = "#bbbbbb";
+//         document.getElementById("load-2").style.color = "black";
+//         document.getElementById("load-3").style.background = "#bbbbbb";
+//         document.getElementById("load-3").style.color = "black";
+//         document.getElementById("load-1").innerHTML =
+//           "❮ Chi Siamo ❯";
+//         document.getElementById("load-2").innerHTML = "Il negozio";
+//         document.getElementById("load-3").innerHTML = "Brand collection";
+//       }
 
-  request.onreadystatechange = () => {
-    if (request.readyState === 4 && request.status === 200) {
-      let items = JSON.parse(request.responseText);
-      console.log(items);
+//       document.getElementById("update").innerHTML = output;
+//     }
+//   };
 
-      let output = "";
+//   request.send();
+// };
 
-      for (let key in items) {
-        output += items[key].content;
-        document.getElementById("load-1").style.background = "#bbbbbb";
-        document.getElementById("load-1").style.color = "black";
-        document.getElementById("load-2").style.background = "black";
-        document.getElementById("load-2").style.color = "white";
-        document.getElementById("load-3").style.background = "#bbbbbb";
-        document.getElementById("load-3").style.color = "black";
-        document.getElementById("load-1").innerHTML =
-          "Chi Siamo";
-        document.getElementById("load-2").innerHTML = "❮ Il negozio ❯";
-        document.getElementById("load-3").innerHTML = "Brand collection";
-      }
+// //Button 2
+// document.getElementById("load-2").onclick = () => {
+//   let request;
 
-      document.getElementById("update").innerHTML = output;
-    }
-  };
+//   if (window.XMLHttpRequest) {
+//     request = new XMLHttpRequest();
+//   } else {
+//     request = new ActiveXObject("Microsoft.XMLHTTP");
+//   }
 
-  request.send();
-};
+//   request.open("GET", "json/tab2.json");
 
-//Button 3
-document.getElementById("load-3").onclick = () => {
-  let request;
+//   request.onreadystatechange = () => {
+//     if (request.readyState === 4 && request.status === 200) {
+//       let items = JSON.parse(request.responseText);
+//       console.log(items);
 
-  if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-  } else {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
-  }
+//       let output = "";
 
-  request.open("GET", "json/tab3.json");
+//       for (let key in items) {
+//         output += items[key].content;
+//         document.getElementById("load-1").style.background = "#bbbbbb";
+//         document.getElementById("load-1").style.color = "black";
+//         document.getElementById("load-2").style.background = "black";
+//         document.getElementById("load-2").style.color = "white";
+//         document.getElementById("load-3").style.background = "#bbbbbb";
+//         document.getElementById("load-3").style.color = "black";
+//         document.getElementById("load-1").innerHTML =
+//           "Chi Siamo";
+//         document.getElementById("load-2").innerHTML = "❮ Il negozio ❯";
+//         document.getElementById("load-3").innerHTML = "Brand collection";
+//       }
 
-  request.onreadystatechange = () => {
-    if (request.readyState === 4 && request.status === 200) {
-      let items = JSON.parse(request.responseText);
-      console.log(items);
+//       document.getElementById("update").innerHTML = output;
+//     }
+//   };
 
-      let output = "";
+//   request.send();
+// };
 
-      for (let key in items) {
-        output += items[key].content;
-        document.getElementById("load-1").style.background = "#bbbbbb";
-        document.getElementById("load-1").style.color = "black";
-        document.getElementById("load-2").style.background = "#bbbbbb";
-        document.getElementById("load-2").style.color = "black";
-        document.getElementById("load-3").style.background = "black";
-        document.getElementById("load-3").style.color = "white";
-        document.getElementById("load-1").innerHTML =
-          "Chi Siamo";
-        document.getElementById("load-2").innerHTML = "Il negozio";
-        document.getElementById("load-3").innerHTML =
-          "❮ Brand collection ❯";
-      }
+// //Button 3
+// document.getElementById("load-3").onclick = () => {
+//   let request;
 
-      document.getElementById("update").innerHTML = output;
-    }
-  };
+//   if (window.XMLHttpRequest) {
+//     request = new XMLHttpRequest();
+//   } else {
+//     request = new ActiveXObject("Microsoft.XMLHTTP");
+//   }
 
-  request.send();
-};
+//   request.open("GET", "json/tab3.json");
 
-  ///// AjaxCalls ends /////
+//   request.onreadystatechange = () => {
+//     if (request.readyState === 4 && request.status === 200) {
+//       let items = JSON.parse(request.responseText);
+//       console.log(items);
+
+//       let output = "";
+
+//       for (let key in items) {
+//         output += items[key].content;
+//         document.getElementById("load-1").style.background = "#bbbbbb";
+//         document.getElementById("load-1").style.color = "black";
+//         document.getElementById("load-2").style.background = "#bbbbbb";
+//         document.getElementById("load-2").style.color = "black";
+//         document.getElementById("load-3").style.background = "black";
+//         document.getElementById("load-3").style.color = "white";
+//         document.getElementById("load-1").innerHTML =
+//           "Chi Siamo";
+//         document.getElementById("load-2").innerHTML = "Il negozio";
+//         document.getElementById("load-3").innerHTML =
+//           "❮ Brand collection ❯";
+//       }
+
+//       document.getElementById("update").innerHTML = output;
+//     }
+//   };
+
+//   request.send();
+// };
+
+//   ///// AjaxCalls ends /////

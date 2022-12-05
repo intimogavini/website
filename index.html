@@ -151,6 +151,7 @@
                </div>
             </section>
 
+
             <!-- weAre section starts  -->
             <section  class="container-ajx" id="we">
                <div class="flex-ajx">
@@ -176,22 +177,38 @@
                      <h1 class="heading">Contatti</h1>
                      <p>Intimo Gavini<br><span>Via Del Fiore, 2b<br><span>Sassari<br><span>-<br><span>T - +39 079230019</span></p>
                   </div>
-                  <form name="contact-form" onsubmit="return false">
+                  <form name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
+                     <!-- <input type="text" name="Name" placeholder="nome"  required>
+                     <input type="text" name="Email" placeholder="email" required>
+                     <textarea name="Message" placeholder="messaggio" ></textarea> -->
+                     <input type="hidden" name="_captcha" value="false">
+                     <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
+                     <!-- <button type="submit">Send</button> -->
                      <div class="container">
                         <div id="display_message"></div>
                         <div class="login">
-                           <input type="text" placeholder="nome" class="input" id="firstname">
-                           <input type="text" placeholder="cognome" class="input" id="lastname">
+                           <input type="text" name="Nome" placeholder="nome" class="input" id="firstname" required>
+                           <input type="text" name="Cognome" placeholder="Cognome" class="input" id="lastname" required>
                         </div>
                         <div class="email">
-                           <input type="email" placeholder="email" class="input" id="email" required>
+                           <input type="email" name="Email" placeholder="email" class="input" id="email" required>
+                           <input type="text" name="Telefono" placeholder="telefono" class="input" id="phone" required>
+                           <input type="hidden" name="_subject" value="Nuovo messaggio - Intimo Gavini website">
                         </div>
                         <div class="msg">
-                           <textarea  class="area" placeholder="messaggio" required  id="message"></textarea>
+                           <textarea  class="area" name="Messaggio" placeholder="messaggio" required  id="message"></textarea>
                         </div>
-                        <div class="btn" onclick="sendContact();">Invia ></div>
+                        <div><button class="btn" type="submit" onclick="sendContact();">Invia ></button></div>
                      </div>
                   </form>
+
+                  <!-- <form action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
+                     <input type="text" name="Name" placeholder="nome"  required>
+                     <input type="text" name="Email" placeholder="email" required>
+                     <textarea name="Message" placeholder="messaggio" ></textarea>
+                     <input type="hidden" name="_captcha" value="false">
+                     <button type="submit">Send</button>
+                  </form> -->
                </div>
             </section>
             <!-- contact section ends  -->

@@ -686,6 +686,7 @@ img {
 form {
   max-width: 45rem;
   background: var(--black);
+  /* background: var(--white); */
   box-sizing: border-box;
   width: 80%;
 }
@@ -730,11 +731,17 @@ form {
 input,
 textarea {
   background-color: black;
+  /* background-color: white; */
 }
 
 input #email,
-#email {
+input #phone {
   background-color: black;
+}
+
+.contact {
+  background-color: #007bb5;
+  /* color: #bb1a06; */
 }
 
 /**
