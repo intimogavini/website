@@ -65,6 +65,8 @@ navSlide();
 
 //scrolling Nav
 const navbar = document.getElementById("navbar");
+// const toggle = document.getElementById("toggle");
+
 
 // OnScroll event handler
 const onScroll = () => {
