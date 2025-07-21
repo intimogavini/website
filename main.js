@@ -37,53 +37,40 @@ window.onload = () => {
 ////// Cookie ends ///////
 
 ///// Navbar starts /////
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+  const navbar = document.getElementById("navbar");
 
-  burger.addEventListener("click", () => {
-    // Toggle nav
-    nav.classList.toggle("nav-active");
+  // Toggle menu on burger click
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
 
-    // Animate Links with a delay between each menu voice
+    // Animate links
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 1
-          }s`;
-      }
+      link.style.animation = link.style.animation
+        ? ''
+        : `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
     });
-
-    //Burger animation
-    burger.classList.toggle("toggle");
   });
-};
 
-navSlide();
+  // Chiudi il menu quando si clicca un link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-active');
+      burger.classList.remove('toggle');
+      navLinks.forEach(link => link.style.animation = '');
+    });
+  });
 
-//scrolling Nav
-const navbar = document.getElementById("navbar");
-// const toggle = document.getElementById("toggle");
-
-
-// OnScroll event handler
-const onScroll = () => {
-  // Get scroll value
-  const scroll = document.documentElement.scrollTop;
-
-  // If scroll value is more than 0 - add class
-  if (scroll > 0) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-};
-
-// Use either onScroll or throttledOnScroll
-window.addEventListener("scroll", onScroll);
-
+  // Aggiungi classe 'scrolled' al navbar quando si scrolla
+  window.addEventListener('scroll', () => {
+    const scroll = document.documentElement.scrollTop;
+    navbar.classList.toggle('scrolled', scroll > 0);
+  });
+});
 ///// navbar ends /////
 
 ///// Slider starts /////

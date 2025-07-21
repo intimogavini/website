@@ -323,17 +323,7 @@ header label {
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: var(--white);
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  display: none;
 }
 
 /* Position the "next button" to the right */
@@ -397,7 +387,7 @@ header label {
 
 .box-circles {
   position: absolute;
-  top: 75%;
+  top: 7vh; /* o 0 */
   left: 50%;
   transform: translateX(-50%);
   padding: 1em;
@@ -538,7 +528,7 @@ img {
 }
 
 .about #careers {
-  margin-top: -0.5rem;
+  margin-top: -0.2vw;
 }
 
 .about .column .content p {
@@ -854,10 +844,6 @@ input #phone {
     margin: 3rem;
   }
 
-  .box-circles {
-    top: 90%;
-  }
-
   #accept {
     padding: 1rem 6rem;
     font-size: 2rem;
@@ -961,23 +947,12 @@ input #phone {
   .contact .column .heading {
     padding-right: 0;
   }
-
-  .box-circles {
-    top: 60%;
-  }
 }
 
 @media (max-device-width: 920px) {
   .text {
     color: pink;
-    top: 23%;
-  }
-  .box-circles {
-    top: 35%;
-  }
-  .prev,
-  .next {
-    top: 22%;
+    top: 30vh;
   }
 
   .image img {
@@ -1008,7 +983,7 @@ input #phone {
   }
   .text {
     color: purple;
-    top: 20%;
+    top: 40%;
     padding: 0;
     width: 40%;
   }
@@ -1098,13 +1073,6 @@ input #phone {
     color: orange;
     top: 23%;
   }
-  .box-circles {
-    top: 55%;
-  }
-  .prev,
-  .next {
-    top: 32%;
-  }
 
   .home .image img {
     height: 62rem;
@@ -1136,11 +1104,6 @@ input #phone {
     margin: 1rem 0;
   }
 
-  .prev,
-  .next {
-    margin-right: 0;
-  }
-
   .about .column .heading {
     padding-left: 0rem;
     padding-right: 0rem;
@@ -1154,7 +1117,7 @@ input #phone {
     min-height: 90%;
   }
   .box-circles {
-    top: 80%;
+    display: none;
   }
 
   .contact .column {
@@ -1205,7 +1168,7 @@ input #phone {
 
   .flex-ajx {
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 10rem;
     text-align: center;
   }
 
@@ -1276,16 +1239,26 @@ input #phone {
 
   .nav-links {
     position: absolute;
-    right: 0px;
-    height: 13vh;
-    top: 0vh;
-    background-color: #d9d9d9;
+    top: 10px; /* distanzia dal bordo superiore */
+    right: 10px; /* distanzia dal bordo destro */
+    left: 10px; /* distanzia anche dal bordo sinistro */
+    height: 50vh;
+    background-color: rgba(
+      217,
+      217,
+      217,
+      0.8
+    ); /* colore con un po' di trasparenza */
+    backdrop-filter: blur(10px); /* sfocatura dello sfondo */
+    border-radius: 5px; /* angoli smussati */
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(100%);
+    transform: translateY(-110%);
     transition: transform 0.5s ease-in;
-    width: 100%;
+    width: auto; /* larghezza adattata a bordo + padding */
+    padding: 1rem 2rem; /* spazio interno per distanziare il contenuto dai bordi */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* ombra leggera */
   }
 
   .nav-links a {
@@ -1398,10 +1371,6 @@ input #phone {
 @media (max-width: 320px) {
   html {
     font-size: 40%;
-  }
-
-  .box-circles {
-    top: 64%;
   }
 
   .text {
