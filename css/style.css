@@ -1071,7 +1071,7 @@ input #phone {
 @media (max-device-width: 540px) {
   .text {
     color: orange;
-    top: 25%;
+    top: 30%;
   }
 
   .home .image img {
