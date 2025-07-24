@@ -828,7 +828,7 @@ input #phone {
     font-size: 70%;
   }
   .text {
-    color: yellow;
+    /* color: yellow; */
     top: 30%;
   }
   .mySlides {
@@ -866,7 +866,7 @@ input #phone {
     font-size: 56%;
   }
   .text {
-    color: rgb(0, 17, 255);
+    /* color: rgb(0, 17, 255); */
     top: 27%;
   }
   .mySlides {
@@ -905,7 +905,7 @@ input #phone {
   }
 
   .text {
-    color: red;
+    /* color: red; */
     top: 23%;
   }
 
@@ -951,7 +951,7 @@ input #phone {
 
 @media (max-device-width: 920px) {
   .text {
-    color: pink;
+    /* color: pink; */
     top: 30vh;
   }
 
@@ -982,7 +982,7 @@ input #phone {
     margin-right: 2rem;
   }
   .text {
-    color: purple;
+    /* color: purple; */
     top: 40%;
     padding: 0;
     width: 40%;
@@ -1070,7 +1070,7 @@ input #phone {
 
 @media (max-device-width: 540px) {
   .text {
-    color: orange;
+    /* color: orange; */
     top: 30%;
   }
 
@@ -1085,7 +1085,7 @@ input #phone {
   }
 
   .text {
-    color: rgb(0, 204, 255);
+    /* color: rgb(0, 204, 255); */
     text-align: center;
     top: 27%;
     width: fit-content;
@@ -1299,7 +1299,7 @@ input #phone {
   }
 
   .text {
-    color: olive;
+    /* color: olive; */
     top: 27%;
   }
 
@@ -1374,7 +1374,7 @@ input #phone {
   }
 
   .text {
-    color: orchid;
+    /* color: orchid; */
     top: 25%;
   }
 
