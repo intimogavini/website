@@ -14,7 +14,7 @@ const cookieStorage = {
 };
 
 const storageType = cookieStorage;
-const consentPropertyName = "Playground - HelloCookie";
+const consentPropertyName = "Intimo Gavini - HelloCookie";
 const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
@@ -149,7 +149,6 @@ const fieldValidation = (field, validationFunction) => {
 
   let isFieldValid = validationFunction(field.value);
   if (!isFieldValid) {
-    // field.className = 'placeholderRed';
     text = "Please Enter valid Email and Message";
     display_message.innerHTML = text;
   } else {
@@ -185,15 +184,11 @@ const sendContact = () => {
   if (isValid()) {
     let usr = new User(email.value, message.value);
 
-    // alert("Thanks for your message.")
     text = "Grazie per il messaggio.";
     display_message.innerHTML = text;
     document.getElementById("email").style.display = "none";
     document.getElementById("message").style.display = "none";
   } else {
-    // text("Fill your email and message fields, please")
-    // field.className = 'placeholderRed';
-
     text = "Ricontrolla la tua email e il tuo messaggio";
     display_message.innerHTML = text;
     document.getElementById("email").style.borderColor = "red";
@@ -202,133 +197,3 @@ const sendContact = () => {
 };
 
 ///// Contact us ends /////
-
-
-
-
-
-
-// ///// AjaxCalls starts /////
-
-// //Button 1
-// document.getElementById("load-1").onclick = () => {
-//   let request;
-
-//   if (window.XMLHttpRequest) {
-//     request = new XMLHttpRequest();
-//   } else {
-//     request = new ActiveXObject("Microsoft.XMLHTTP");
-//   }
-
-//   request.open("GET", "json/tab1.json");
-
-//   request.onreadystatechange = () => {
-//     if (request.readyState === 4 && request.status === 200) {
-//       let items = JSON.parse(request.responseText);
-//       console.log(items);
-
-//       let output = "";
-
-//       for (let key in items) {
-//         output += items[key].content;
-//         document.getElementById("load-1").style.background = "black";
-//         document.getElementById("load-1").style.color = "white";
-//         document.getElementById("load-2").style.background = "#bbbbbb";
-//         document.getElementById("load-2").style.color = "black";
-//         document.getElementById("load-3").style.background = "#bbbbbb";
-//         document.getElementById("load-3").style.color = "black";
-//         document.getElementById("load-1").innerHTML =
-//           "❮ Chi Siamo ❯";
-//         document.getElementById("load-2").innerHTML = "Il negozio";
-//         document.getElementById("load-3").innerHTML = "Brand collection";
-//       }
-
-//       document.getElementById("update").innerHTML = output;
-//     }
-//   };
-
-//   request.send();
-// };
-
-// //Button 2
-// document.getElementById("load-2").onclick = () => {
-//   let request;
-
-//   if (window.XMLHttpRequest) {
-//     request = new XMLHttpRequest();
-//   } else {
-//     request = new ActiveXObject("Microsoft.XMLHTTP");
-//   }
-
-//   request.open("GET", "json/tab2.json");
-
-//   request.onreadystatechange = () => {
-//     if (request.readyState === 4 && request.status === 200) {
-//       let items = JSON.parse(request.responseText);
-//       console.log(items);
-
-//       let output = "";
-
-//       for (let key in items) {
-//         output += items[key].content;
-//         document.getElementById("load-1").style.background = "#bbbbbb";
-//         document.getElementById("load-1").style.color = "black";
-//         document.getElementById("load-2").style.background = "black";
-//         document.getElementById("load-2").style.color = "white";
-//         document.getElementById("load-3").style.background = "#bbbbbb";
-//         document.getElementById("load-3").style.color = "black";
-//         document.getElementById("load-1").innerHTML =
-//           "Chi Siamo";
-//         document.getElementById("load-2").innerHTML = "❮ Il negozio ❯";
-//         document.getElementById("load-3").innerHTML = "Brand collection";
-//       }
-
-//       document.getElementById("update").innerHTML = output;
-//     }
-//   };
-
-//   request.send();
-// };
-
-// //Button 3
-// document.getElementById("load-3").onclick = () => {
-//   let request;
-
-//   if (window.XMLHttpRequest) {
-//     request = new XMLHttpRequest();
-//   } else {
-//     request = new ActiveXObject("Microsoft.XMLHTTP");
-//   }
-
-//   request.open("GET", "json/tab3.json");
-
-//   request.onreadystatechange = () => {
-//     if (request.readyState === 4 && request.status === 200) {
-//       let items = JSON.parse(request.responseText);
-//       console.log(items);
-
-//       let output = "";
-
-//       for (let key in items) {
-//         output += items[key].content;
-//         document.getElementById("load-1").style.background = "#bbbbbb";
-//         document.getElementById("load-1").style.color = "black";
-//         document.getElementById("load-2").style.background = "#bbbbbb";
-//         document.getElementById("load-2").style.color = "black";
-//         document.getElementById("load-3").style.background = "black";
-//         document.getElementById("load-3").style.color = "white";
-//         document.getElementById("load-1").innerHTML =
-//           "Chi Siamo";
-//         document.getElementById("load-2").innerHTML = "Il negozio";
-//         document.getElementById("load-3").innerHTML =
-//           "❮ Brand collection ❯";
-//       }
-
-//       document.getElementById("update").innerHTML = output;
-//     }
-//   };
-
-//   request.send();
-// };
-
-//   ///// AjaxCalls ends /////
