@@ -117,11 +117,17 @@ header {
   padding-bottom: 3rem;
   background-color: black;
   z-index: 1000;
+  height: auto;
+  overflow: visible;
 }
 
 header .logo {
   font-size: 2rem;
   color: var(--red);
+  height: auto;
+  max-height: 5vh; /* oppure 100px, da adattare */
+  object-fit: contain;
+  display: block;
 }
 
 header .logo span {
