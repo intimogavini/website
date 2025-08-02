@@ -1,5 +1,39 @@
 /////// Cookie starts//////////
 
+// const cookieStorage = {
+//   getItem: (item) => {
+//     const cookies = document.cookie
+//       .split(";")
+//       .map((cookie) => cookie.split("="))
+//       .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+//     return cookies[item];
+//   },
+//   setItem: (item, value) => {
+//     document.cookie = `${item}=${value};`;
+//   },
+// };
+
+// const storageType = cookieStorage;
+// const consentPropertyName = "IntimoGavini_HelloCookie";
+// const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+// const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+
+// window.onload = () => {
+//   const acceptFn = (event) => {
+//     saveToStorage();
+//     consentPopup.classList.add("hidden");
+//   };
+//   const consentPopup = document.getElementById("consent-popup");
+//   const acceptBtn = document.getElementById("accept");
+//   acceptBtn.addEventListener("click", acceptFn);
+
+//   if (shouldShowPopup(storageType)) {
+//     setTimeout(() => {
+//       consentPopup.classList.remove("hidden");
+//     }, 2000);
+//   }
+// };
+
 const cookieStorage = {
   getItem: (item) => {
     const cookies = document.cookie
@@ -9,25 +43,28 @@ const cookieStorage = {
     return cookies[item];
   },
   setItem: (item, value) => {
-    document.cookie = `${item}=${value};`;
+    document.cookie = `${item}=${value};path=/;`;
   },
 };
 
 const storageType = cookieStorage;
-const consentPropertyName = "Intimo Gavini - HelloCookie";
+const consentPropertyName = "IntimoGavini_HelloCookie";
 const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+const saveToStorage = () => storageType.setItem(consentPropertyName, "true");
 
 window.onload = () => {
   const acceptFn = (event) => {
-    saveToStorage(storageType);
+    event.preventDefault(); // 👈 importante!
+    saveToStorage();
     consentPopup.classList.add("hidden");
   };
+
   const consentPopup = document.getElementById("consent-popup");
   const acceptBtn = document.getElementById("accept");
+
   acceptBtn.addEventListener("click", acceptFn);
 
-  if (shouldShowPopup(storageType)) {
+  if (shouldShowPopup()) {
     setTimeout(() => {
       consentPopup.classList.remove("hidden");
     }, 2000);
