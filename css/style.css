@@ -808,6 +808,14 @@ input #phone {
   height: auto;
 }
 
+.footer-info {
+  text-align: center;
+  color: var(--white); /* o #fff */
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
 /**
  *  MEDIA QUERIES
  */
