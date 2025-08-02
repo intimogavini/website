@@ -396,7 +396,7 @@ header label {
 
 .box-circles {
   position: absolute;
-  top: 7vh; /* o 0 */
+  top: 8vh;
   left: 50%;
   transform: translateX(-50%);
   padding: 1em;
