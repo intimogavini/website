@@ -54,7 +54,7 @@ const saveToStorage = () => storageType.setItem(consentPropertyName, "true");
 
 window.onload = () => {
   const acceptFn = (event) => {
-    event.preventDefault(); // 👈 importante!
+    event.preventDefault();
     saveToStorage();
     consentPopup.classList.add("hidden");
   };
