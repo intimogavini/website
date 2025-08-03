@@ -13,11 +13,15 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      media="print"
+      onload="this.media='all';"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      />
+    </noscript>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/style.scss"> -->
@@ -26,15 +30,18 @@
     <!-- header section starts  -->
     <header id="navbar">
       <a href="#" class="logo">
-        <img
-          width="150"
-          height="50"
-          src="./images/logo-intimo-white.png"
-          alt="Intimo Gavini logo - Sassari"
-          class="logo"
-          style="display: block"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="./images/logo-intimo-white.webp" type="image/webp" />
+          <img
+            width="150"
+            height="50"
+            src="./images/logo-intimo-white.png"
+            alt="Intimo Gavini logo - Sassari"
+            class="logo"
+            style="display: block"
+            loading="lazy"
+          />
+        </picture>
       </a>
       <ul class="nav-links">
         <li><a href="#we">Chi siamo</a></li>
@@ -116,12 +123,18 @@
           <div class="box-container">
             <div class="box">
               <div class="box-pic">
-                <img
-                  width="499"
-                  height="212"
-                  src="./images/card-play-harder.jpg"
-                  alt="Papillon, fascino e eleganza"
-                />
+                <picture>
+                  <source
+                    srcset="./images/card-play-harder.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    width="480"
+                    height="240"
+                    src="./images/card-play-harder.jpg"
+                    alt="Papillon, fascino e eleganza"
+                  />
+                </picture>
               </div>
               <div class="box-text">
                 <p>
@@ -133,12 +146,18 @@
             </div>
             <div class="box">
               <div class="box-pic">
-                <img
-                  width="477"
-                  height="212"
-                  src="./images/card-simplicity.jpg"
-                  alt="Ciocca, calze alta qualita"
-                />
+                <picture>
+                  <source
+                    srcset="./images/card-simplicity.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    width="480"
+                    height="240"
+                    src="./images/card-simplicity.jpg"
+                    alt="Ciocca, calze alta qualita"
+                  />
+                </picture>
               </div>
               <div class="box-text">
                 <p>
@@ -150,12 +169,18 @@
             </div>
             <div class="box">
               <div class="box-pic">
-                <img
-                  width="363"
-                  height="134"
-                  src="./images/card-innovation.jpg"
-                  alt="Bretelle, alla moda e comodi"
-                />
+                <picture>
+                  <source
+                    srcset="./images/card-innovation.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    width="480"
+                    height="240"
+                    src="./images/card-innovation.jpg"
+                    alt="Bretelle, alla moda e comodi"
+                  />
+                </picture>
               </div>
               <div class="box-text">
                 <p>
@@ -265,10 +290,10 @@
                   difficilmente soddisfabili nella grande distribuzione.
                 </p>
                 <br />
-                <h4>
+                <h3>
                   Una boutique storica che si distingue per la propria passione
                   e tradizione familiare
-                </h4>
+                </h3>
                 <p>
                   Intimo Gavini fa parte dei Negozi Storici della città che,
                   così come i monumenti della tradizione, rappresentano un
@@ -283,12 +308,17 @@
             </section>
             <aside class="colajx sidebar">
               <div class="image">
-                <img
-                  width="1440"
-                  height="600"
-                  src="images/shop_intimo.jpeg"
-                  alt="we-do-playground"
-                />
+                <picture>
+                  <source srcset="images/shop_intimo.webp" type="image/webp" />
+                  <img
+                    width="1440"
+                    height="600"
+                    src="images/shop_intimo.jpeg"
+                    alt="we-do-playground"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </aside>
           </div>
@@ -399,7 +429,7 @@
               rel="noreferrer"
               aria-label="Facebook"
               target="_blank"
-              ><i class="fa fa-facebook"></i
+              ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
@@ -408,7 +438,7 @@
               rel="noreferrer"
               aria-label="Instagram"
               target="_blank"
-              ><i class="fa fa-instagram"></i
+              ><i class="fab fa-instagram"></i
             ></a>
           </li>
         </ul>

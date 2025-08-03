@@ -1,26 +1,28 @@
 /**
  *  Adding Gotham font
  */
-
 @font-face {
   font-family: "Gotham-Bold";
-  src: url("fonts/Gotham-Bold") format("truetype"), local("Gotham");
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham-Book";
-  src: url("fonts/Gotham-Book") format("truetype"), local("Gotham");
+  src: url("../fonts/Gotham-Book.woff2") format("woff2");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham-Medium";
-  src: url("font/Gotham-Medium") format("truetype"), local("Gotham");
+  src: url("../fonts/Gotham-Medium.woff2") format("woff2");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
+  font-display: swap;
 }
 
 /**
@@ -764,14 +766,9 @@ input #phone {
   padding: 0 3rem;
 }
 
-.fa-facebook {
+.fa-facebook-f {
   font-size: 4rem;
   color: #3b5998;
-}
-
-.fa-linkedin-square {
-  color: #007bb5;
-  font-size: 4rem;
 }
 
 .fa-instagram {
