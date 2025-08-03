@@ -683,7 +683,6 @@ img {
 form {
   max-width: 45rem;
   background: var(--black);
-  /* background: var(--white); */
   box-sizing: border-box;
   width: 80%;
 }
@@ -810,7 +809,7 @@ input #phone {
 
 .footer-info {
   text-align: center;
-  color: var(--white); /* o #fff */
+  color: var(--white);
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   margin-top: 1rem;
   padding: 0 1rem;
@@ -906,7 +905,6 @@ input #phone {
     left: 0.8rem;
     right: 0.8rem;
     padding: 1rem 1rem;
-    /* font-size: 2rem; */
     font-size: 1.6rem;
   }
   .contact .column .heading {
