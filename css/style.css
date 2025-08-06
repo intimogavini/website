@@ -54,6 +54,15 @@
   border: none;
 }
 
+h2 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-end: 0.3em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
 *::selection {
   background: var(--black);
   color: #fff;
@@ -596,8 +605,8 @@ img {
 
 #update {
   font-size: 2rem;
-  padding: 3rem;
-  padding-bottom: 4.5rem;
+  padding: 2rem;
+  padding-bottom: clamp(2rem, 3vh, 4rem);
 }
 
 #load-1 {
