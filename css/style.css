@@ -54,6 +54,10 @@
   border: none;
 }
 
+h1 {
+  font-size: 7rem;
+}
+
 h2 {
   display: block;
   font-size: 1.17em;
