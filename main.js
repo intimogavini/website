@@ -200,3 +200,20 @@ const sendContact = () => {
 };
 
 ///// Contact us ends /////
+
+///// Sw.js start ////
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js", { scope: "/" })
+      .then((registration) => {
+        console.log("Service Worker registrato:", registration.scope);
+      })
+      .catch((err) => {
+        console.error("Service Worker non registrato:", err);
+      });
+  });
+}
+
+///// Sw.js start ////
