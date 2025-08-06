@@ -536,10 +536,6 @@ img {
   text-align: right;
 }
 
-.about #careers {
-  margin-top: -0.2vw;
-}
-
 .about .column .content p {
   font-size: 1.8rem;
   color: var(--white);
