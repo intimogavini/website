@@ -24,7 +24,6 @@
     </noscript>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/style.scss"> -->
   </head>
   <body>
     <!-- header section starts  -->
@@ -64,12 +63,21 @@
             <!-- Full-width images with caption text -->
             <div class="mySlides fade">
               <picture>
-                <source srcset="images/slide-hello.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/slide-hello-480.webp   480w,
+                    images/slide-hello-768.webp   768w,
+                    images/slide-hello-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
-                  width="1440"
-                  height="798"
                   src="images/slide-hello.jpg"
                   alt="hello-intimo"
+                  fetchpriority="high"
+                  width="1440"
+                  height="798"
                 />
               </picture>
               <div class="text">
@@ -79,13 +87,21 @@
             </div>
             <div class="mySlides fade">
               <picture>
-                <source srcset="images/slide-play.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/slide-hello-480.webp   480w,
+                    images/slide-hello-768.webp   768w,
+                    images/slide-hello-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
+                  src="images/slide-hello.jpg"
+                  alt="hello-intimo"
+                  loading="lazy"
                   width="1440"
                   height="798"
-                  src="images/slide-play.jpg"
-                  alt="play-intimo"
-                  loading="lazy"
                 />
               </picture>
               <div class="text">
@@ -95,13 +111,21 @@
             </div>
             <div class="mySlides fade">
               <picture>
-                <source srcset="images/slide-circle.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/slide-circle-480.webp   480w,
+                    images/slide-circle-768.webp   768w,
+                    images/slide-circle-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
-                  width="1440"
-                  height="798"
                   src="images/slide-circle.jpg"
                   alt="circle-intimo"
                   loading="lazy"
+                  width="1440"
+                  height="798"
                 />
               </picture>
               <div class="text">
@@ -133,6 +157,7 @@
                     height="240"
                     src="./images/card-play-harder.jpg"
                     alt="Papillon, fascino e eleganza"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -156,6 +181,7 @@
                     height="240"
                     src="./images/card-simplicity.jpg"
                     alt="Ciocca, calze alta qualita"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -179,6 +205,7 @@
                     height="240"
                     src="./images/card-innovation.jpg"
                     alt="Bretelle, alla moda e comodi"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -197,13 +224,21 @@
           <div class="column" id="weare">
             <div class="image">
               <picture>
-                <source srcset="images/banner-we-are.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/banner-we-are-480.webp   480w,
+                    images/banner-we-are-768.webp   768w,
+                    images/banner-we-are-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
-                  width="1440"
-                  height="600"
                   src="images/banner-we-are.jpg"
                   alt="Liabel, intimo made in Italy"
                   loading="lazy"
+                  width="1440"
+                  height="600"
                   style="display: block"
                 />
               </picture>
@@ -214,22 +249,27 @@
                 il marchio sinonimo<br />
                 <span>di storia, italianità e intimo.</span>
               </p>
-              <div class="buttons">
-                <!-- <a href="#" class="btn">visita > </a> -->
-                <!-- <a href="https://www.liabel.eu/it/" target="_blank" class="btn" >visita &gt; </a> -->
-              </div>
+              <div class="buttons"></div>
             </div>
           </div>
           <div class="column" id="wedo">
             <div class="image">
               <picture>
-                <source srcset="images/banner-we-do.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/banner-we-do-480.webp   480w,
+                    images/banner-we-do-768.webp   768w,
+                    images/banner-we-do-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
-                  width="1440"
-                  height="600"
                   src="images/banner-we-do.jpg"
                   alt="Janira, intimo, lingerie, outwear donna"
                   loading="lazy"
+                  width="1440"
+                  height="600"
                   style="display: block"
                 />
               </picture>
@@ -241,21 +281,27 @@
                   >sentirti bella e attraente.</span
                 >
               </p>
-              <div class="buttons">
-                <!-- <a href="https://janira.com/" target="_blank" class="btn" >visita &gt;</a> -->
-              </div>
+              <div class="buttons"></div>
             </div>
           </div>
           <div class="column" id="careers">
             <div class="image">
               <picture>
-                <source srcset="images/banner-carrers.webp" type="image/webp" />
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/banner-carrers-480.webp   480w,
+                    images/banner-carrers-768.webp   768w,
+                    images/banner-carrers-1440.webp 1440w
+                  "
+                  sizes="(max-width: 480px) 480px, (max-width: 1024px) 768px, 1440px"
+                />
                 <img
-                  width="1440"
-                  height="600"
                   src="images/banner-carrers.jpg"
                   alt="Charro, intimo uomo casual e sportivo"
                   loading="lazy"
+                  width="1440"
+                  height="600"
                   style="display: block"
                 />
               </picture>
@@ -263,9 +309,7 @@
             <div class="content">
               <h1 class="heading">Charro</h1>
               <p>intimo uomo casual<br /><span>sportivo e pratico.</span></p>
-              <div class="buttons">
-                <!-- <ahref="https://elcharroabbigliamento.com/" target="_blank" class="btn" >visita &gt; </a> -->
-              </div>
+              <div class="buttons"></div>
             </div>
           </div>
         </section>
