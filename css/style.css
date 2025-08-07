@@ -104,9 +104,9 @@ body {
   font-weight: 100;
 }
 
-.button {
+/* .button {
   margin-right: 12em;
-}
+} */
 
 form .btn:hover,
 #wedo .btn:hover,
@@ -1125,14 +1125,14 @@ input #phone {
     flex: 1 1 28rem;
   }
 
-  .about .column .content .buttons a {
+  /* .about .column .content .buttons a {
     width: 100%;
     text-align: center;
-  }
+  } */
 
-  .about .column .content .buttons a:last-child {
+  /* .about .column .content .buttons a:last-child {
     margin: 1rem 0;
-  }
+  } */
 
   .about .column .heading {
     padding-left: 0rem;
