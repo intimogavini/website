@@ -1,8 +1,8 @@
 {
     "name": "Intimo Gavini",
     "short_name": "Intimo",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "/website/",
+    "scope": "/website/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#bb1a06",
