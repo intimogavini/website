@@ -54,7 +54,18 @@
   border: none;
 }
 
-h1 {
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+h2 {
   font-size: 6rem;
 }
 
@@ -368,7 +379,7 @@ header label {
   transform: translateY(-50%);
 }
 
-.text h1 {
+.text h2 {
   margin-bottom: 10px;
   color: #fff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -669,7 +680,7 @@ img {
   padding-top: 10rem;
 }
 
-.contact .column .content h1 {
+.contact .column .content h2 {
   font-size: 7rem;
 }
 
@@ -968,7 +979,7 @@ input #phone {
   }
 }
 
-@media (max-device-width: 920px) {
+@media (max-width: 920px) {
   .text {
     /* color: pink; */
     top: 30vh;
@@ -1087,7 +1098,7 @@ input #phone {
   }
 }
 
-@media (max-device-width: 540px) {
+@media (max-width: 540px) {
   .text {
     /* color: orange; */
     top: 30%;
